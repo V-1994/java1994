@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Username</h3>
+    <input type="text" id="name" oninput="onclear()">
+    <button onclick="welcome()">submit</button>
+    <div id="welcome_message"></div>
+    <div id="dashboard">
+        <span id='today'>Today</span><br /><br />
+        <span>Raju -</span><span id="raju"></span><br />
+        <span>Ravi -</span><span id="ravi"></span><br />
+        <span>Gita -</span><span id="gita"></span><br />
+    </div>
+</body>
+<script>
+    let day = 5
+    console.log('day', day)
+    switch(day) {
+        case 0: 
+            document.getElementById('today').innerHTML = 'sunday'
+            document.getElementById('raju').innerHTML = 'present'
+            document.getElementById('ravi').innerHTML = 'present'
+            document.getElementById('gita').innerHTML = 'present'
+        break
+        case 1: 
+            document.getElementById('today').innerHTML = 'monday'
+            document.getElementById('raju').innerHTML = 'absent'
+            document.getElementById('ravi').innerHTML = 'present'
+            document.getElementById('gita').innerHTML = 'present'
+        break
+        case 2: 
+            document.getElementById('today').innerHTML = 'tuesday'
+            document.getElementById('raju').innerHTML = 'absent'
+            document.getElementById('ravi').innerHTML = 'present'
+            document.getElementById('gita').innerHTML = 'present'
+        break
+        case 3: 
+            document.getElementById('today').innerHTML = 'wednesday'
+            document.getElementById('raju').innerHTML = 'absent'
+            document.getElementById('ravi').innerHTML = 'present'
+            document.getElementById('gita').innerHTML = 'present'
+        break
+        case 4: 
+            document.getElementById('today').innerHTML = 'thursday'
+            document.getElementById('raju').innerHTML = 'absent'
+            document.getElementById('ravi').innerHTML = 'present'
+            document.getElementById('gita').innerHTML = 'present'
+        break
+        case 5: 
+            document.getElementById('today').innerHTML = 'Friday'
+            document.getElementById('raju').innerHTML = 'absent'
+            document.getElementById('ravi').innerHTML = 'present'
+            document.getElementById('gita').innerHTML = 'absent'
+        break
+        case 6:
+            document.getElementById('today').innerHTML = 'saturday'
+            document.getElementById('raju').innerHTML = 'present'
+            document.getElementById('ravi').innerHTML = 'present'
+            document.getElementById('gita').innerHTML = 'present'
+
+    }
+    const onclear = function() {
+        if (document.getElementById('name').value == '') {
+           document.getElementById('welcome_message').innerHTML = ''
+        }
+    }
+    const welcome = function() {
+        let name = document.getElementById('name').value;
+        if (name == 'raju' || name == 'ravi' || name == 'gita') {
+            document.getElementById('welcome_message').innerHTML = `welcome ${name}`
+        } else {
+            document.getElementById('welcome_message').innerHTML = "you're not allowed"
+        }
+        
+    } 
+
+</script>
+</html>

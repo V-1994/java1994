@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Tell me about yourself</h2>
+    <button onclick = "loop()">Try it</button>
+    <p id="demo"></p>
+</body>
+<script>
+   let str = 'Name : Vinothkumar , DOB : 26 , UG : BE Mech , PG : MBA , Fav color : Red , College : Anna University'
+   let array = str.split(',')
+   const loop = function() {
+    for (i = 0; i < array.length; i++) {
+       document.getElementById('demo').innerHTML += array[i] + "<br>";
+   }
+}
+</script>
+</html>
